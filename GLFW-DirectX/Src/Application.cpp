@@ -12,6 +12,7 @@ Application::Application(int wWidth, int wHeight)
 
 
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
 
 	m_Window = glfwCreateWindow(m_WindowWidth, m_WindowHeight, "DirectX Demo", nullptr, nullptr);
@@ -19,7 +20,9 @@ Application::Application(int wWidth, int wHeight)
 		OutputDebugString(L"Window creation failed!\n");
 
 
-	m_WindowHandle = glfwGetWin32Window(m_Window);
+	m_WindowHandle	= glfwGetWin32Window(m_Window);
+	m_Graphics		= std::make_unique<Graphics>(m_WindowHandle);
+
 }
 
 Application::~Application()

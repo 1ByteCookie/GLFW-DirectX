@@ -6,7 +6,9 @@
 #include <Windows.h>
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
+#include <memory>
 
+#include "Graphics.hpp"
 
 class Application
 {
@@ -17,13 +19,15 @@ public:
 	~Application();
 
 	inline GLFWwindow* GetWindow() const { return m_Window; }
+	inline Graphics* Renderer() const { return m_Graphics.get(); }
 
 private:
 
-	GLFWwindow* m_Window;
-	HWND		m_WindowHandle;
+	GLFWwindow*					m_Window;
+	HWND						m_WindowHandle;
+	std::unique_ptr<Graphics>	m_Graphics;
 
-	int			m_WindowWidth;
-	int			m_WindowHeight;
+	int							m_WindowWidth;
+	int							m_WindowHeight;
 
 };
