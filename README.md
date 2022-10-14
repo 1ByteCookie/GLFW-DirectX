@@ -16,14 +16,14 @@ It's possible to use DirectX with GLFW using [**glfw3native.h**](https://www.glf
 that comes with the library. GLFW is supposed to be a cross-platform library, but DirectX being a Microsoft only technology will only work on Windows or an Xbox.
 
 
-##### C++ macros can be used so that an application can select whatever rendering API to use on whatever platform it's targeting, so it's should be possible to build a cross-platform application despite using platform intrinsic technology.
+##### C++ macros can be used so that an application can select whatever rendering API to use on whatever platform it's targeting, so it should be possible to build a cross-platform application despite using platform intrinsic technology.
 
 <br> <br>
 
 ## Retrieving the [HWND](https://learn.microsoft.com/en-us/windows/win32/learnwin32/what-is-a-window-)
 
 Getting the Handle to the win32 window is just a simple [function](https://www.glfw.org/docs/3.3/group__native.html#gafe5079aa79038b0079fc09d5f0a8e667)
-call which can be exposed by including **glfw3native.h** and defining a macro to expore the win32 api.
+call which can be exposed by including **glfw3native.h** and defining a macro to expose the win32 api.
 
 ```cpp
 //macro must be defined before including glfw3native.h
@@ -35,7 +35,7 @@ call which can be exposed by including **glfw3native.h** and defining a macro to
 
 <br>
 
-After including the header file, retrieving the the window handle is as simple as:
+After including the header file, retrieving the window handle is as simple as:
 ```cpp
 HWND WindowHandle = glfwGetWin32Window(GLFWWindow);
 ```
