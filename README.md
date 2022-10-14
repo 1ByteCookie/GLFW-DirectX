@@ -45,7 +45,7 @@ The window handle will be used to create the DXGI swap chain and Direct3D [Devic
 <br>
 
 ## Framework for learning DirectX
-I think GLFW is a good library to use for learning DirectX, it's fairly simple to use and it abstracts all the boilerplate code that's required to setup on win32. Like registering a window class, setting up a window procedure to handle window messages, mouse and keyboard input. GLFW will take of all that, letting users to focus on just learning Direct3D.
+I think GLFW is a good library to use for learning DirectX, it's fairly simple to use and it abstracts all the boilerplate code that's required to setup on win32. Like registering a window class, setting up a window procedure to handle window messages, mouse and keyboard input. GLFW will take care of all that, letting users to focus on just learning Direct3D.
 
 
 <br>
