@@ -9,6 +9,21 @@
 #include <memory>
 
 #include "Graphics.hpp"
+#include <DirectXMath.h>
+
+
+struct Triangle
+{
+
+	ID3D11Buffer*			VertexBuffer;
+	ID3D11Buffer*			IndexBuffer;
+
+	ID3D11VertexShader*		VertexShader;
+	ID3D11PixelShader*		PixelShader;
+
+	ID3D11InputLayout*		InputLayout;
+
+};
 
 class Application
 {
@@ -21,6 +36,9 @@ public:
 	inline GLFWwindow* GetWindow() const { return m_Window; }
 	inline Graphics* Renderer() const { return m_Graphics.get(); }
 
+	void InitTriangle();
+	void DrawTriangle();
+
 private:
 
 	GLFWwindow*					m_Window;
@@ -30,4 +48,8 @@ private:
 	int							m_WindowWidth;
 	int							m_WindowHeight;
 
+	D3D11_VIEWPORT				m_ViewportDescriptor;
+
+	Triangle					m_Triangle;
+	
 };

@@ -33,4 +33,8 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Res\Shaders\PixelShader.hlsl" />
+    <FxCompile Include="Res\Shaders\VertexShader.hlsl" />
+  </ItemGroup>
 </Project>

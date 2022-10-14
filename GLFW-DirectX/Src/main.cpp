@@ -4,14 +4,17 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 {
 
 	Application* This = new Application(1280, 720);
-
+	This->InitTriangle();
 
 	while (!glfwWindowShouldClose(This->GetWindow()))
 	{
 
 		glfwPollEvents();
-		This->Renderer()->ClearColorBuffer(0.25f, 0.0f, 5.0f, 1.0f);
+		
+		This->Renderer()->ClearColorBuffer(0.08f, 0.0f, 0.16f, 1.0f);
 
+		This->DrawTriangle();
+		
 		This->Renderer()->SwapChain()->Present(0, 0);
 	
 	}
