@@ -12,7 +12,7 @@ GlfwDependency = "Dependencies/GLFW/lib/glfw3.dll"
 
 
 os.chdir("../")
-print("PYTHON CWD: " + os.getcwd());
+print("PYTHON CWD: " + os.getcwd())
 
 
 shutil.copy(GlfwDependency, OutputDir)
