@@ -111,14 +111,14 @@ void Application::InitTriangle()
 	{
 		// Shader creation
 		ID3DBlob* vsBlob;
-		D3DReadFileToBlob(L"Res/Shaders/ShaderBin/VertexShader.cso", &vsBlob);
+		D3DReadFileToBlob(L"ShaderBin/VertexShader.cso", &vsBlob);
 		m_Graphics->Device()->CreateVertexShader(vsBlob->GetBufferPointer(),
 												 vsBlob->GetBufferSize(),
 												 NULL,
 												 &m_Triangle.VertexShader);
 
 		ID3DBlob* psBlob;
-		D3DReadFileToBlob(L"Res/Shaders/ShaderBin/PixelShader.cso", &psBlob);
+		D3DReadFileToBlob(L"ShaderBin/PixelShader.cso", &psBlob);
 		m_Graphics->Device()->CreatePixelShader(psBlob->GetBufferPointer(),
 												psBlob->GetBufferSize(),
 												NULL,
