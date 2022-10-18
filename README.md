@@ -14,7 +14,7 @@
 # Getting Started
 The dependency already comes with the repository as precompiled binaries, it's a .dll file, a python script should take care of putting it in the output directory when the project is built. Before running the project, you have to set the working directory to ```$(OutDir)``` in the project settings because Visual Studio won't let Git track this setting.
 
-<img src="Res/projectsettings.png" alt="settings.png" width="800"/>
+<img src="Res/projectsettings.PNG" alt="settings.png" width="800"/>
 
 
 <br>
