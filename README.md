@@ -11,6 +11,14 @@
 
 <br>
 
+# Getting Started
+The dependency already comes with the repository as precompiled binaries, it's a .dll file, a python script should take care of putting it in the output directory when the project is built. Before running the project, you have to set the working directory to ```$(OutDir)``` in the project settings because Visual Studio won't let Git track this setting.
+
+<img src="Res/projectsettings.png" alt="settings.png" width="800"/>
+
+
+<br>
+
 # DirectX Rendering in GLFW
 It's possible to use DirectX with GLFW using [**glfw3native.h**](https://www.glfw.org/docs/3.3/glfw3native_8h.html)
 that comes with the library. GLFW is supposed to be a cross-platform library, but DirectX being a Microsoft only technology will only work on Windows or an Xbox.
